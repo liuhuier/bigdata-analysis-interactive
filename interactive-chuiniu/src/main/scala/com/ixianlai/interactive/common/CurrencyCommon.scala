@@ -29,6 +29,6 @@ object CurrencyCommon {
         spark.read.table(edw_gameover_user).createOrReplaceTempView("gameover_user")
         // 好友牌局结束 -- app维度 datasystem.edw_gameover_app
         spark.read.table(edw_gameover_app).createOrReplaceTempView("gameover_app")
-        
+
     }
 }

@@ -7,8 +7,10 @@ import org.apache.spark.sql.SparkSession
   */
 object ChuiNiuAction {
     def main(args: Array[String]): Unit = {
-        val Array(targetDay, ods_db_usercenter_hird_brand_bind, edw_server_loginlogout, edw_gameover_user, edw_gameover_app) = args
-        val spark: SparkSession = SparkSession.builder().appName(s"liuhui_ChuiNiuAction_$targetDay").enableHiveSupport().getOrCreate()
+        val Array(day, ods_db_usercenter_hird_brand_bind, edw_server_loginlogout, edw_gameover_user,
+        edw_gameover_app) = args
+        val spark: SparkSession = SparkSession.builder().appName(s"liuhui_ChuiNiuAction_$day").enableHiveSupport()
+                .getOrCreate()
 
     }
 }
