@@ -50,7 +50,9 @@ object CurrencyCommon {
 
         val res = res1.join(res2, "target_day").join(res4, "target_day")
                 .select(res1.col("all_count"), res2.col("qinyouquan_count"), res4.col("haoyouzhuo_count"))
-        // res.rdd.map(_.mkString("|")).saveAsTextFile("file:")
-        res.write.format("csv").save("file:///home/hadoop/liuhui/output")
+        res.rdd.map(_.mkString("|")).saveAsTextFile("file:///home/hadoop/liuhui/output1")
+
+
+
     }
 }
